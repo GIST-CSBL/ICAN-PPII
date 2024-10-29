@@ -241,10 +241,10 @@ class PPIInhibitorInferenceDataset():
       
 
     def process_protein(self):
-        with open('data/features/esm2.pickle', 'rb') as f:
+        with open('data/toy_example/esm2.pickle', 'rb') as f:
             esm = pickle.load(f)
-        protein_phy = pd.read_csv('data/features/protein_phy.csv')
-        kg = pd.read_csv('data/features/knowledge_graph_embedding.csv')
+        protein_phy = pd.read_csv('data/toy_example/protein_phy.csv')
+        kg = pd.read_csv('data/toy_example/knowledge_graph_embedding.csv')
 
         self.esm = {k: torch.FloatTensor(v).to(self.device) for k, v in esm.items()}
         self.kg = {kg.uniprot_id[i]: torch.FloatTensor(kg.iloc[i, 1:]).to(self.device) for i in range(len(kg))}
