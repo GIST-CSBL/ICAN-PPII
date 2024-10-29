@@ -17,7 +17,7 @@ pip install pandas, numpy, scikit-learn
 ```
 
 ### Prediction
-To predict PPI inhibitors with your own dataset, please refer to the `test.ipynb` file.  
+To predict PPI inhibitors with your own dataset, please refer to the `predict.ipynb` file.  
 Before making predictions, you need to download the model file from the link below and move it to the `weights/` directory:
 https://drive.google.com/file/d/1Ye5R8-CDkE1a_neF029dnLbY5yQ2Qrpk/view?usp=sharing
 
