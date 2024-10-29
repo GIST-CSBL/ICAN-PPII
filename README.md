@@ -18,13 +18,16 @@ pip install pandas, numpy, scikit-learn
 
 ### Prediction
 To predict PPI inhibitors with your own dataset, please refer to the `predict.ipynb` file.  
-Before making predictions, you need to download the model file from the link below and move it to the `weights/` directory:
+Before making predictions, you need to download the `weights.model` file from the link below and move it to the `weights/` directory.  
 https://drive.google.com/file/d/1Ye5R8-CDkE1a_neF029dnLbY5yQ2Qrpk/view?usp=sharing
 
 Currently, predictions are limited to PPI targets included in the training dataset, as the knowledge graph has not yet been published.
 
 ### Train
-To reproduce the results or fine-tune the model, please refer to the `train.ipynb` file.
+To reproduce the results or fine-tune the model, please refer to the train.ipynb file.  
+To reproduce the results, download the preprocessed feature files (.pickle) from the link below and place them in the data/features/ directory.  
+https://drive.google.com/drive/folders/1IJU6l0wvAQOKQvm3EJ492zG2j39sOKlS?usp=sharing
+
 
 
 ## Contact
