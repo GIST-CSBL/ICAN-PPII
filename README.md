@@ -18,8 +18,7 @@ pip install pandas, numpy, scikit-learn
 
 
 ### Prediction
-Currently, predictions are limited, as the knowledge graph has not yet been published. 
-Once available, you will be able to predict PPI inhibitors with your own dataset by referring to the `predict.ipynb` file.  
+You can test the code using a toy example provided in `predict.ipynb`.  
 Before making predictions, you will need to download the `weights.model` file from the link below and move it to the `weights/` directory.  
 https://drive.google.com/file/d/1Ye5R8-CDkE1a_neF029dnLbY5yQ2Qrpk/view?usp=sharing
 
