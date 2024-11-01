@@ -199,7 +199,7 @@ class PPIInhibitorInferenceDataset():
         self.device = device
         
         df = pd.read_csv(datapath)
-        interface = pd.read_csv('data/processed_interface.csv')
+        interface = pd.read_csv('data/toy_example/processed_interface.csv')
         df = pd.merge(df, interface, left_on='ppi_label', right_on='ppi_label')
         
         self.beg_idx1 = df['beg_idx1'].astype(int).tolist()
