@@ -10,17 +10,32 @@ Protein-protein interactions (PPIs) are crucial therapeutic targets, yet discove
 Set up an Anaconda environment and install required package dependencies.
 
 ```
-conda create -n PPIINet python=3.9
+conda create -n ICAN-PPII python=3.9
+conda activate ICAN-PPII
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
-pip install unimol_tools
-pip install pandas, numpy, scikit-learn
+pip install fair-esm unimol_tools huggingface_hub pandas scikit-learn
 ```
 
 
 ### Prediction
-You can test the code using a toy example provided in `predict.ipynb`.  
-Before making predictions, you will need to download the `weights.model` file from the link below and move it to the `weights/` directory.  
+Currently, predictions are limited, as the knowledge graph has not yet been published. 
+Once available, you will be able to predict PPI inhibitors with your own dataset by referring to the `predict.ipynb` file.  
+
+Before making predictions, you need to download pfeature for extracting protein physicochemical properties.
+```
+git clone https://github.com/GIST-CSBL/ICAN-PPII.git
+cd ICAN-PPII/src
+git clone https://github.com/raghavagps/Pfeature.git
+
+mkdir weights
+cd weights
+wget https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t30_150M_UR50D.pt
+#reference: https://github.com/facebookresearch/esm
+```
+
+Also, you need to download the `weights.model` file from the link below and move it to the `weights/` directory.  
 https://drive.google.com/file/d/1Ye5R8-CDkE1a_neF029dnLbY5yQ2Qrpk/view?usp=sharing
+
 
 
 
