@@ -116,7 +116,7 @@ def compute_compound_props(smiles):
     properties.append([NumSaturatedCarbocycles(x) for x in mols])
     properties.append([NumSaturatedRings(x) for x in mols])
     properties.append([NOCount(x) for x in mols])
-    properties = np.stack(properties)
+    properties = np.stack(properties).T
     
     properties_dict = {smiles[idx]: properties[idx, :] for idx in range(len(smiles))}
     
