@@ -188,8 +188,6 @@ def process_interface(df, maxlen=800):
         df['pad_idx2'] = maxlen - df['end_idx2']
         
     df.to_csv('data/toy_example/processed_interface.csv')
-    
-    return df
   
     
 
